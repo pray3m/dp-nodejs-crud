@@ -2,7 +2,7 @@
 
 #### Digital Pathshala Assignment | Node JS September Session
 
-Guided by: [Sandeep Kumar](@maheshbasnet089)
+Guided by: [Mahesh Basnet](@https://github.com/maheshbasnet089)
 
 This is a simple CRUD (Create, Read, Update, Delete) application for managing books in a bookstore. It's built with Node.js, Express.js, EJS templates, and Sequelize ORM.
 

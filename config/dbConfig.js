@@ -1,9 +1,9 @@
-// FOR LOCAL ENVIRONMENT
+// For local environment
 module.exports = {
   HOST: "localhost",
   USER: "root",
   PASSWORD: "",
-  DB: "dp-nodejs-bookstore",
+  DB: "dp_nodejs_bookshop",
   dialect: "mysql",
   pool: {
     max: 5,
@@ -14,16 +14,16 @@ module.exports = {
 };
 
 // for production
-module.exports = {
-  HOST: "containers-us-west-206.railway.app",
-  USER: "root",
-  PASSWORD: "qz3ncGhNgAyUlzqrvo8o",
-  DB: "railway",
-  dialect: "mysql",
-  pool: {
-    max: 5,
-    min: 0,
-    acquire: 30000,
-    idle: 10000,
-  },
-};
+// module.exports = {
+//     HOST: "containers-us-west-206.railway.app",
+//     USER: "root",
+//     PASSWORD: "qz3ncGhNgAyUlzqrvo8o",
+//     DB: "railway",
+//     dialect: "mysql",
+//     pool: {
+//       max: 5,
+//       min: 0,
+//       acquire: 30000,
+//       idle: 10000,
+//     },
+//   };
