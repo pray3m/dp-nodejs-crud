@@ -10,7 +10,6 @@ This is a simple CRUD (Create, Read, Update, Delete) application for managing bo
 
 - Create, Read, Update, and Delete books.
 - List all books in the bookstore.
-- View details of individual books.
 - Minimalistic and easy-to-use interface.
 
 ## Installation
@@ -21,3 +20,11 @@ This is a simple CRUD (Create, Read, Update, Delete) application for managing bo
 4. Visit http://localhost:3000
 
 ## Screenshots
+
+### All Books Page
+
+![Home Page](public/ss/home.png)
+
+### Edit Book Page
+
+![Edit Book Page](public/ss/edit.png)
