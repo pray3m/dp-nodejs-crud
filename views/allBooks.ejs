@@ -8,6 +8,12 @@
     <title>Bookstore - All Books</title>
     <style>
       /* Add your internal CSS styling here */
+
+      html {
+        margin: 0;
+        padding: 0;
+      }
+
       body {
         font-family: Arial, sans-serif;
         background-color: #f0f0f0;
@@ -16,6 +22,21 @@
 
       h1 {
         text-align: center;
+      }
+
+      header h1 {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+        margin-top: 0;
+        transition: background-color 0.3s;
+      }
+
+      h2,
+      h4 {
+        margin: 6px;
+        color: rgb(6, 58, 110);
       }
 
       .book-list {
@@ -37,11 +58,11 @@
 
       .book-image {
         max-width: 100%;
+        max-height: 300px;
       }
 
-      .book-details h2 {
-        font-size: 1.2em;
-        margin: 4px;
+      .book-details p {
+        margin: 0;
       }
 
       .book-actions {
@@ -55,12 +76,13 @@
       .delete-button {
         background-color: #007bff;
         color: #fff;
-        padding: 5px 10px;
+        padding: 8px 16px;
         border: none;
         cursor: pointer;
         text-decoration: none;
         border-radius: 5px;
         transition: background-color 0.3s;
+        font-size: medium;
       }
 
       .edit-button:hover,
@@ -91,7 +113,9 @@
     </style>
   </head>
   <body>
-    <%- include('components/header') %>
+    <header>
+      <h1>Premium Book Shop</h1>
+    </header>
 
     <h1>All Books</h1>
 
@@ -105,8 +129,8 @@
         />
         <div class="book-details">
           <h2><%= book.title %></h2>
-          <p>Author: <%= book.author %></p>
-          <p>$<%= book.price %></p>
+          <h4><%= book.author %></h4>
+          <h4>$<%= book.price %></h4>
           <p><%= book.description %></p>
         </div>
         <div class="book-actions">
