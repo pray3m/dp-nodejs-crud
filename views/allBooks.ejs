@@ -11,7 +11,6 @@
       body {
         font-family: Arial, sans-serif;
         background-color: #f0f0f0;
-        padding: 20px;
         text-align: center; /* Center-align the entire content */
       }
 
@@ -113,8 +112,8 @@
         <div class="book-actions">
           <a href="/editBook/<%= book.id %>" class="edit-button">Edit</a>
           <form
-            method="POST"
-            action="/books/delete/<%= book.id %>"
+            method="get"
+            action="/deleteBook/<%= book.id %>"
             class="delete-form"
           >
             <button type="submit" class="delete-button">Delete</button>

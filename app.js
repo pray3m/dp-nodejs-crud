@@ -81,6 +81,16 @@ app.post("/editBook/:id", async (req, res) => {
   res.redirect("/");
 });
 
+// Delete book
+app.get("/deleteBook/:id", async (req, res) => {
+  const { id } = req.params;
+
+  const book = await books.findByPk(id);
+
+  await book.destroy();
+
+  res.redirect("/");
+});
 
 //  Server listening
 app.listen(3000, () => {
