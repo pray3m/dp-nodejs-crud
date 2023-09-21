@@ -24,7 +24,7 @@ app.get("/ping", (req, res) => {
 // Get all books
 app.get("/", async (req, res) => {
   const allBooks = await books.findAll();
-  res.render("home", { books: allBooks });
+  res.render("allBooks", { books: allBooks });
 });
 
 // Add new book
@@ -54,6 +54,33 @@ app.post("/add-book", async (req, res) => {
 
 //   res.render("book", { book });
 // });
+
+// Edit book
+app.get("/editBook/:id", async (req, res) => {
+  const { id } = req.params;
+
+  const book = await books.findByPk(id);
+
+  res.render("editBook", { book });
+});
+
+app.post("/editBook/:id", async (req, res) => {
+  const { id } = req.params;
+  const { title, price, description, author, image } = req.body;
+
+  const book = await books.findByPk(id);
+
+  book.title = title;
+  book.price = price;
+  book.description = description;
+  book.author = author;
+  book.image = image;
+
+  await book.save();
+
+  res.redirect("/");
+});
+
 
 //  Server listening
 app.listen(3000, () => {
