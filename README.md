@@ -25,6 +25,7 @@ This is a simple CRUD (Create, Read, Update, Delete) application for managing bo
 
 ![Home Page](public/ss/home.png)
 
+
 ### Edit Book Page
 
 ![Edit Book Page](public/ss/edit.png)
